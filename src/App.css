@@ -1,0 +1,8 @@
+:root {
+	--light-gray: #F8F7F5;
+	--baseline: 4px;
+}
+
+body {
+	background-color: var(--light-gray);
+}
