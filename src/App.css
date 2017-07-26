@@ -1,6 +1,11 @@
+* {
+	box-sizing: border-box;
+}
+
 :root {
 	--background-gray: #F8F7F5;
 	--border-gray: #F4F4F4;
+	--text-black: #555;
 	--baseline: 4px;
 }
 
@@ -16,6 +21,8 @@ body {
 	border: 1px solid var(--border-gray);
 	border-radius: calc(var(--baseline) * 2);
 	box-shadow: 0 0 calc(var(--baseline) * 4) calc(var(--baseline) * -1);
+
+	overflow: hidden;
 }
 
 .Direct-Modal {
@@ -24,4 +31,11 @@ body {
 	top: 50%;
 	left:50%;
 	transform: translate(-50%, -50%);
+}
+
+.Direct-Header {
+	height: calc(var(--baseline) * 12);
+	text-align: center;
+	padding:calc(var(--baseline) * 4 ) calc(var(--baseline) * 5 );
+	color: var(--text-black);
 }
