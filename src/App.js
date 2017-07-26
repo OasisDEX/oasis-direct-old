@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import {ChooseAssets}  from './components/choose-assets'
+import {ContentFrame}  from './components/content-frame'
 import './App.css';
 
 class App extends Component {
 	render() {
-		return <ChooseAssets/>;
+		return <ContentFrame/>;
 	}
 }
 

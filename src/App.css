@@ -1,8 +1,27 @@
 :root {
-	--light-gray: #F8F7F5;
+	--background-gray: #F8F7F5;
+	--border-gray: #F4F4F4;
 	--baseline: 4px;
 }
 
 body {
-	background-color: var(--light-gray);
+	background: var(--background-gray);
+}
+
+.Direct-Content-Frame {
+	width: calc(var(--baseline) * 125);
+	height: calc(var(--baseline) * 120);
+
+	background: white;
+	border: 1px solid var(--border-gray);
+	border-radius: calc(var(--baseline) * 2);
+	box-shadow: 0 0 calc(var(--baseline) * 4) calc(var(--baseline) * -1);
+}
+
+.Direct-Modal {
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	left:50%;
+	transform: translate(-50%, -50%);
 }
