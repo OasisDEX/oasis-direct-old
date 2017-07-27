@@ -14,6 +14,7 @@ h1, h2, h3, h4, h5, h6 {
 
 :root {
 	--background-gray: #F8F7F5;
+	--background-asset-selector: #FCFCFB;
 	--border-gray: rgba(151, 151, 151, 0.10);
 	--text-black: #49494A;
 	--baseline: 4px;
@@ -54,10 +55,22 @@ body {
 
 	height: calc(var(--baseline) * 14);
 	color: var(--text-black);
+	border-top: 1px solid var(--border-gray);
 
 	letter-spacing: calc(var(--baseline) * 0.4);;
 }
 
+.Direct-Asset-Selector {
+	height: calc(var(--baseline) * 62);
+	background: var(--background-asset-selector);
+	border-top: 2px solid var(--border-gray);
+	padding: calc(var(--baseline) * 6);
+}
+
 .Direct-Modifier--uppercase {
 	text-transform: uppercase;
+}
+
+.Direct-Modifier--no-border {
+	border: none;
 }
