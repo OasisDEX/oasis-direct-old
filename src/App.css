@@ -1,13 +1,21 @@
-@import  './fonts.css';
+@import './fonts.css';
 
 * {
 	box-sizing: border-box;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	padding: 0;
+}
+
 :root {
 	--background-gray: #F8F7F5;
-	--border-gray: #F4F4F4;
-	--text-black: #555;
+	--border-gray: rgba(151, 151, 151, 0.10);
+	--text-black: #49494A;
 	--baseline: 4px;
 }
 
@@ -15,29 +23,41 @@ body {
 	background: var(--background-gray);
 }
 
-.Direct-Content-Frame {
-	width: calc(var(--baseline) * 125);
-	height: calc(var(--baseline) * 120);
-
-	background: white;
-	border: 1px solid var(--border-gray);
-	border-radius: calc(var(--baseline) * 2);
-	box-shadow: 0 0 calc(var(--baseline) * 4) calc(var(--baseline) * -1);
-
-	overflow: hidden;
-}
-
 .Direct-Modal {
 	position: absolute;
 	z-index: 1;
 	top: 50%;
-	left:50%;
+	left: 50%;
 	transform: translate(-50%, -50%);
 }
 
+.Direct-Content-Frame {
+	font-family: 'Montserrat', sans-serif;
+	font-size: calc(var(--baseline) * 4);
+	font-style: normal;
+	font-weight: 400;
+	width: calc(var(--baseline) * 125);
+	height: calc(var(--baseline) * 120);
+
+	background: white;
+	border: 2px solid var(--border-gray);
+	border-radius: calc(var(--baseline) * 1);
+	box-shadow: 0 0 calc(var(--baseline) * 4) 1px rgba(0, 0, 0, 0.15);
+
+	overflow: hidden;
+}
+
 .Direct-Header {
-	height: calc(var(--baseline) * 12);
-	text-align: center;
-	padding:calc(var(--baseline) * 4 ) calc(var(--baseline) * 5 );
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	height: calc(var(--baseline) * 14);
 	color: var(--text-black);
+
+	letter-spacing: calc(var(--baseline) * 0.4);;
+}
+
+.Direct-Modifier--uppercase {
+	text-transform: uppercase;
 }

@@ -8,7 +8,7 @@ class App extends Component {
 	render() {
 		return <Modal>
 			<ContentFrame>
-        <Header content='Choose which Assets to Trade'/>
+        <Header text='Choose Asset'/>
 			</ContentFrame>
 		</Modal>;
 	}

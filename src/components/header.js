@@ -2,8 +2,8 @@ import React, {Component} from 'react'
 
 export class Header extends Component {
 	render() {
-		return <header className="Direct-Header">
-			{this.props.content}
+		return <header className='Direct-Header'>
+			<h4 className='Direct-Modifier--uppercase'>{this.props.text}</h4>
 		</header>;
 	}
 }
