@@ -13,7 +13,7 @@ class App extends Component {
         <Header text="Choose Asset" />
 				<AssetSelector />
 				{/*TODO : ETH and REP should be replaced with the names of the selected Assets*/}
-				<QuantitySelector text={["I want to use ", <span className="Direct-Quantity-Unit">Ether</span>, " to buy"]} units="REP"/>
+				<QuantitySelector supply="Ether" demand="REP"/>
 			</ContentFrame>
 		</Modal>;
 	}
