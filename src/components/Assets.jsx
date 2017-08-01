@@ -4,7 +4,7 @@ export class Assets extends Component {
 	render() {
 		return <div className={`Direct-Assets ${this.props.classes}`}>
 			<ul className="Direct-Asset-List">
-				<li className="Direct-Asset-List-Item">
+				<li className="Direct-Asset-List-Item Direct-Modifier--selected">
 					<icon /> <span>Ethereum</span>
 				</li>
 				<li className="Direct-Asset-List-Item">

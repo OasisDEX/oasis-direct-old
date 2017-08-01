@@ -25,7 +25,7 @@ icon {
 
 *::-webkit-scrollbar {
 	width: 6px;
-	background-color: white;
+	background-color: transparent;
 }
 
 *::-webkit-scrollbar-thumb {
@@ -99,8 +99,6 @@ body {
 	width: calc(var(--baseline) * 48);
 	height: calc(var(--baseline) * 49);
 
-	padding: calc(var(--baseline) * 1);
-
 	background: white;
 
 	border: 1px solid var(--border-assets);
@@ -117,7 +115,15 @@ body {
 }
 
 .Direct-Asset-List-Item {
-	padding: calc(var(--baseline) * 2) calc(var(--baseline) * 1);
+	font-family: 'Open Sans', sans-serif;
+	font-size: calc(var(--baseline) * 3);
+	font-weight: 600;
+	letter-spacing: 1.34px;
+	line-height:calc(var(--baseline) * 5);
+
+	color: rgba(0,0,0,0.7);
+
+	padding: calc(var(--baseline) * 2) calc(var(--baseline) * 3);
 }
 
 .Direct-Asset-List-Item:hover {
@@ -127,6 +133,19 @@ body {
 .Direct-Asset-List-Item:not(:first-child) {
 	border-top: 1px solid var(--border-assets-item);
 }
+
+.Direct-Asset-List-Item.Direct-Modifier--selected {
+	background: rgba(233,233,232,0.15);
+}
+
+.Direct-Asset-List-Item:not(:first-child).Direct-Modifier--selected {
+	border-top: 2px solid var(--border-gray);
+}
+
+.Direct-Asset-List-Item:first-child.Direct-Modifier--selected {
+	border-bottom: 1px solid var(--border-gray);
+}
+
 
 .Direct-Modifier--uppercase {
 	text-transform: uppercase;
@@ -142,4 +161,8 @@ body {
 
 .Direct-Modifier--right {
 	float: right;
+}
+
+.Direct-Modifier--selected {
+
 }
