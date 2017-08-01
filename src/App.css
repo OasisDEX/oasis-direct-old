@@ -1,7 +1,36 @@
 @import './fonts.css';
 
+:root {
+	--background-gray: #F8F7F5;
+	--background-asset-selector: #FCFCFB;
+	--border-gray: rgba(151, 151, 151, 0.10);
+	--border-assets: rgba(73, 73, 74, 0.10);
+	--border-assets-item: #FAFAFA;
+	--scroll-color: #E9E9E8;
+	--text-black: #49494A;
+	--baseline: 4px;
+	--border-radius: calc(var(--baseline) * 1);
+}
+
+icon {
+	display: inline;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
 * {
 	box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+	width: 6px;
+	background-color: white;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: var(--scroll-color);
+	border-radius: var(--border-radius);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -12,12 +41,9 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 0;
 }
 
-:root {
-	--background-gray: #F8F7F5;
-	--background-asset-selector: #FCFCFB;
-	--border-gray: rgba(151, 151, 151, 0.10);
-	--text-black: #49494A;
-	--baseline: 4px;
+ul {
+	margin: 0;
+	padding: 0;
 }
 
 body {
@@ -42,7 +68,7 @@ body {
 
 	background: white;
 	border: 2px solid var(--border-gray);
-	border-radius: calc(var(--baseline) * 1);
+	border-radius: var(--border-radius);
 	box-shadow: 0 0 calc(var(--baseline) * 4) 1px rgba(0, 0, 0, 0.15);
 
 	overflow: hidden;
@@ -67,10 +93,53 @@ body {
 	padding: calc(var(--baseline) * 6);
 }
 
+.Direct-Assets {
+	display: inline-block;
+
+	width: calc(var(--baseline) * 48);
+	height: calc(var(--baseline) * 49);
+
+	padding: calc(var(--baseline) * 1);
+
+	background: white;
+
+	border: 1px solid var(--border-assets);
+	border-radius: var(--border-radius);
+}
+
+.Direct-Asset-List {
+	list-style-type: none;
+
+	height: 100%;
+	display: block;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.Direct-Asset-List-Item {
+	padding: calc(var(--baseline) * 2) calc(var(--baseline) * 1);
+}
+
+.Direct-Asset-List-Item:hover {
+	cursor: pointer;
+}
+
+.Direct-Asset-List-Item:not(:first-child) {
+	border-top: 1px solid var(--border-assets-item);
+}
+
 .Direct-Modifier--uppercase {
 	text-transform: uppercase;
 }
 
 .Direct-Modifier--no-border {
 	border: none;
+}
+
+.Direct-Modifier--left {
+	float: left;
+}
+
+.Direct-Modifier--right {
+	float: right;
 }
