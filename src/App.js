@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {createStore} from 'redux';
 import {ContentFrame}  from './components/ContentFrame';
 import {Modal}  from './components/Modal';
 import {Header}  from './components/Header';

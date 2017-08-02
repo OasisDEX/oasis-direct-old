@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 export class Assets extends Component {
 	render() {
-		return <div className={`Direct-Assets ${this.props.classes}`}>
+		return <div className="Direct-Assets">
 			<ul className="Direct-Asset-List">
 				<li className="Direct-Asset-List-Item Direct-Modifier--selected">
 					<icon /> <span>Ethereum</span>
