@@ -1,9 +1,7 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-export class Modal extends Component {
-	render() {
-		return <div className="Direct-Modal">
-			{this.props.children}
-		</div>
-	}
-}
+export const Modal = ({children}) => (
+	<div className="Direct-Modal">
+		{children}
+	</div>
+);

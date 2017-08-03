@@ -1,9 +1,7 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-export class ContentFrame extends Component {
-	render() {
-		return <div className="Direct-Content-Frame">
-			{this.props.children}
-		</div>
-	}
-}
+export const ContentFrame = ({children}) => (
+	<div className="Direct-Content-Frame">
+		{children}
+	</div>
+);
