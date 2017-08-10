@@ -155,12 +155,13 @@ body {
 }
 
 .Direct-Quantity-Selector {
-	padding: calc(var(--baseline) * 11) calc(var(--baseline) * 14);
+	padding: calc(var(--baseline) * 11) calc(var(--baseline) * 11);
 	border-top: 2px solid var(--border-gray);
 
 	font-family: 'Open Sans', sans-serif;
 	font-size: calc(var(--baseline) * 4.5);
 	font-weight: 600;
+	text-align: center;
 	letter-spacing: 1.25px;
 	line-height: calc(var(--baseline) * 6);
 

@@ -11,9 +11,9 @@ const tokens = (state = config.tokens.kovan, action) => state;
 const selected = (state = initialSelection, action) => {
 	switch (action.type) {
 		case("SELECT_BASE"):
-			return {...initialSelection, base: action.token};
+			return {...state, base: action.token};
 		case("SELECT_QUOTE"):
-			return {...initialSelection, quote: action.token};
+			return {...state, quote: action.token};
 		default:
 			return state;
 	}
