@@ -7,13 +7,15 @@ const initialSelection = {
 };
 
 
-const tokens = (state = config.tokens.kovan, action) => state;
+const tokens = (state = config.tokens.kovan, _) => state;
 const selected = (state = initialSelection, action) => {
 	switch (action.type) {
 		case("SELECT_BASE"):
 			return {...state, base: action.token};
 		case("SELECT_QUOTE"):
 			return {...state, quote: action.token};
+		case("CLEAR"):
+			return initialSelection;
 		default:
 			return state;
 	}

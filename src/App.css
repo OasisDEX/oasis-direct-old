@@ -117,7 +117,7 @@ body {
 	height: 100%;
 	display: block;
 	overflow-x: hidden;
-	overflow-y: scroll;
+	overflow-y: auto;
 }
 
 .Direct-Asset-List-Item {
@@ -147,7 +147,8 @@ body {
 }
 
 .Direct-Asset-List-Item:not(:first-child).Direct-Modifier--selected {
-	border-top: 2px solid var(--border-gray);
+	border-top: 1px solid var(--border-gray);
+	border-bottom: 1px solid var(--border-gray);
 }
 
 .Direct-Asset-List-Item:first-child.Direct-Modifier--selected {

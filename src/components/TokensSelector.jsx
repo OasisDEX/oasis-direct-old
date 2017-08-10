@@ -3,9 +3,17 @@ import {connect} from 'react-redux';
 import Tokens from './Tokens';
 import {selectBase, selectQuote} from '../utils/actions';
 
-const tokens = state => {
+const baseTokensProps = state => {
 	return {
 		tokens: state.tokens,
+		selected: state.selected.base,
+	}
+};
+
+const quoteTokensProps = state => {
+	return {
+		tokens: state.tokens,
+		selected: state.selected.quote,
 	}
 };
 
@@ -25,8 +33,8 @@ const onQuoteSelect = dispatch => {
 	}
 };
 
-const BaseTokens = connect(tokens, onBaseSelect)(Tokens);
-const QuoteTokens = connect(tokens, onQuoteSelect)(Tokens);
+const BaseTokens = connect(baseTokensProps, onBaseSelect)(Tokens);
+const QuoteTokens = connect(quoteTokensProps, onQuoteSelect)(Tokens);
 
 const TokensSelector = () => (
 	<div className="Direct-Asset-Selector">
