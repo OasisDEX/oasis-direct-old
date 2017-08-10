@@ -1,12 +1,12 @@
 import React from 'react';
-import {Assets} from './Assets';
+import Tokens from './Tokens';
 
-const AssetSelector = () => (
+const TokensSelector = () => (
 	<div className="Direct-Asset-Selector">
-		<Assets/>
+		<Tokens/>
 		<icon style={{margin: 'calc(var(--baseline) * 5)'}} className="Direct-Icon-Transfer" />
-		<Assets />
+		<Tokens />
 	</div>
 );
 
-export default AssetSelector;
+export default TokensSelector;
