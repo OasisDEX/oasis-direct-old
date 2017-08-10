@@ -1,13 +1,12 @@
 import React from 'react';
-import {connect} from 'react-redux';
 
-const Tokens = ({tokens}) => (
+const Tokens = ({tokens, selectToken}) => (
 	<div className="Direct-Assets">
 		<ul className="Direct-Asset-List">
 			{
 				tokens.map((token) => {
 					return (
-						<li key={token.address} className="Direct-Asset-List-Item">
+						<li key={token.address} onClick={ () => selectToken(token) } className="Direct-Asset-List-Item">
 							<icon />
 							<span>{token.label}</span>
 						</li>
@@ -18,11 +17,5 @@ const Tokens = ({tokens}) => (
 	</div>
 );
 
-const mapStateToProps = state => {
-	return {
-		tokens: state.tokens
-	}
-};
-
-export default connect(mapStateToProps)(Tokens);
+export default Tokens;
 
